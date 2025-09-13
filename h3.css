@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.whatsapp-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #25D366;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.whatsapp-btn:hover {
+  background: #1eb354;
+}
+
+.rating-box,
+.rating-box2,
+.star-box3,
+.star-widget {
+  direction: rtl; /* makes stars align right-to-left */
+  unicode-bidi: bidi-override;
+  font-size: 1.8em;
+  display: inline-flex;
+}
+
+.rating-box input,
+.rating-box2 input,
+.star-box3 input,
+.star-widget input {
+  display: none; /* hide radios */
+}
+
+.rating-box label,
+.rating-box2 label,
+.star-box3 label,
+.star-widget label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.rating-box input:checked ~ label,
+.rating-box2 input:checked ~ label,
+.star-box3 input:checked ~ label,
+.star-widget input:checked ~ label {
+  color: gold;
+}
+
+.rating-box label:hover,
+.rating-box label:hover ~ label,
+.rating-box2 label:hover,
+.rating-box2 label:hover ~ label,
+.star-box3 label:hover,
+.star-box3 label:hover ~ label,
+.star-widget label:hover,
+.star-widget label:hover ~ label {
+  color: orange;
+}
+
+.avg-display,
+.avg-display2,
+.avg-output3,
+.avg-box {
+  margin-top: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #444;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+  gap: 20px; /* space between cards */
+}

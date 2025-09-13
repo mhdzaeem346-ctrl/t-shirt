@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Shirt Shop</title>
+  <link rel="stylesheet" href="h3.css" type="text/css">
+</head>
+<body>
+  <div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="images.html/luff.png" alt="Luffy T-Shirt">
+      <h3>Luffy Back Printed T-Shirt</h3>
+      <p>Rs 599</p>
+      <a href="https://wa.me/918139853180" target="_blank">
+        <button class="whatsapp-btn">💬 Contact on WhatsApp 👕</button>
+      </a>
+      <form id="ratingForm5">
+        <div class="rating-box2">
+          <input type="radio" id="starD5" name="rating5" value="5"><label for="starD5">★</label>
+          <input type="radio" id="starD4" name="rating5" value="4"><label for="starD4">★</label>
+          <input type="radio" id="starD3" name="rating5" value="3"><label for="starD3">★</label>
+          <input type="radio" id="starD2" name="rating5" value="2"><label for="starD2">★</label>
+          <input type="radio" id="starD1" name="rating5" value="1"><label for="starD1">★</label>
+        </div>
+      </form>
+      <div class="avg-display2" id="avgBox5">Average Rating: 0.0 / 5</div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="images.html/mockup ver.png" alt="Max Verstappen T-Shirt">
+      <h3>Max Verstappen Back Printed T-Shirt</h3>
+      <p>Rs 599</p>
+      <a href="https://wa.me/918139853180" target="_blank">
+        <button class="whatsapp-btn">💬 Contact on WhatsApp 👕</button>
+      </a>
+      <form id="ratingForm6">
+        <div class="star-box3">
+          <input type="radio" id="starE5" name="rating6" value="5"><label for="starE5">★</label>
+          <input type="radio" id="starE4" name="rating6" value="4"><label for="starE4">★</label>
+          <input type="radio" id="starE3" name="rating6" value="3"><label for="starE3">★</label>
+          <input type="radio" id="starE2" name="rating6" value="2"><label for="starE2">★</label>
+          <input type="radio" id="starE1" name="rating6" value="1"><label for="starE1">★</label>
+        </div>
+      </form>
+      <div class="avg-output3" id="avgBox6">Average Rating: 0.0 / 5</div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="images.html/ronldo mock.png" alt="Ronaldo T-Shirt">
+      <h3>Ronaldo Back Printed T-Shirt</h3>
+      <p>Rs 599</p>
+      <a href="https://wa.me/918139853180" target="_blank">
+        <button class="whatsapp-btn">💬 Contact on WhatsApp 👕</button>
+      </a>
+      <form id="ratingForm4">
+        <div class="star-widget">
+          <input type="radio" id="starC5" name="rating4" value="5"><label for="starC5">★</label>
+          <input type="radio" id="starC4" name="rating4" value="4"><label for="starC4">★</label>
+          <input type="radio" id="starC3" name="rating4" value="3"><label for="starC3">★</label>
+          <input type="radio" id="starC2" name="rating4" value="2"><label for="starC2">★</label>
+          <input type="radio" id="starC1" name="rating4" value="1"><label for="starC1">★</label>
+        </div>
+      </form>
+      <div class="avg-box" id="avgBox4">Average Rating: 0.0 / 5</div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="images.html/madara moc.png" alt="Madara T-Shirt">
+      <h3>Madara Back Printed T-Shirt</h3>
+      <p>Rs 599</p>
+      <a href="https://wa.me/918139853180" target="_blank">
+        <button class="whatsapp-btn">💬 Contact on WhatsApp 👕</button>
+      </a>
+      <form id="ratingForm3">
+        <div class="rating-box">
+          <input type="radio" id="starB5" name="rating3" value="5"><label for="starB5">★</label>
+          <input type="radio" id="starB4" name="rating3" value="4"><label for="starB4">★</label>
+          <input type="radio" id="starB3" name="rating3" value="3"><label for="starB3">★</label>
+          <input type="radio" id="starB2" name="rating3" value="2"><label for="starB2">★</label>
+          <input type="radio" id="starB1" name="rating3" value="1"><label for="starB1">★</label>
+        </div>
+      </form>
+      <div class="avg-display" id="avgBox3">Average Rating: 0.0 / 5</div>
+    </div>
+
+  </div>
+
+  <script>
+    function setupRating(formName, avgBoxId) {
+      let totalVotes = 0;
+      let totalScore = 0;
+
+      document.querySelectorAll(`input[name="${formName}"]`).forEach(input => {
+        input.addEventListener("change", function() {
+          const value = parseInt(this.value);
+          totalVotes++;
+          totalScore += value;
+
+          const avg = (totalScore / totalVotes).toFixed(1);
+          document.getElementById(avgBoxId).innerText =
+            "Average Rating: " + avg + " / 5";
+        });
+      });
+    }
+
+    setupRating("rating5", "avgBox5");
+    setupRating("rating6", "avgBox6");
+    setupRating("rating4", "avgBox4");
+    setupRating("rating3", "avgBox3");
+  </script>
+</body>
+</html>
